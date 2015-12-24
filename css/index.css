@@ -49,15 +49,15 @@ html,body{
     color:#fff;
     width: 100%;
     height: 100%;
-    font-size: 40px;
-
 }
 .a1 h2{
-    margin: 0 auto;
-    background: url("../images/title1.png") no-repeat 10px 20px;
+    margin: 50px auto;
+    text-align: center;
     width: 370px;
     height: 96px;
-    opacity: 0;
+    letter-spacing: 5px;
+    font-size: 70px;
+    opacity: 1;
     -webkit-transition: all 3s ease-in-out 0s;
 }
 #a1 h2{
@@ -87,45 +87,65 @@ html,body{
     text-align: center;
 }
 .a1 .point p{
-    display: inline-block;
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    -webkit-transition: all 0.8s ease-in-out 0s;
+    transition: all 0.8s ease-in-out 0s;
 }
 .a1 .point p:nth-child(1){
-    -webkit-transform: translate(-300px,10px);
+    background:url("../images/btn1.png") no-repeat;
+    left: 5%;
+    top: -2%;
 }
 .a1 .point p:nth-child(2){
-    -webkit-transform: translate(600px,50px);
-    font-size: 30px;
-    top: 5px;
+    background:url("../images/btn2.png") no-repeat;
+    left: 20%;
+    top: -5%;
 }
 .a1 .point p:nth-child(3){
-    -webkit-transform: translate(-400px,-20px);
-    font-size: 20px;
+    background:url("../images/btn1.png") no-repeat;
+    left: 35%;
+    top: -4%;
 }
 .a1 .point p:nth-child(4){
-    -webkit-transform: translate(500px,40px);
-    font-size: 40px;
+    background:url("../images/btn1.png") no-repeat;
+    left: 50%;
+    top: -5%;
 }
 .a1 p:nth-child(5){
-    -webkit-transform: translate(-500px,-100px);
-    font-size: 50px;
+    background:url("../images/btn1.png") no-repeat;
+    left: 65%;
+    top: -3%;
 }
 .a1 p:nth-child(6){
-    -webkit-transform: translate(700px,200px);
-    font-size: 20px;
+    background:url("../images/btn1.png") no-repeat;
+    right: 5%;
+    top: -5%;
+}
+#a1 .point p{
+    -webkit-transform: rotate(-360deg) scale(0.7);
+    transform: rotate(-360deg) scale(0.7);
 }
 
-#a1 p{
-    -webkit-transform: translate(0,0);
-    -webkit-transition: 1s;
+.a2 h2,.a3 h2,.a4 h2{
+    margin: 50px auto;
+    text-align: center;
+    width: 370px;
+    height: 96px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 40px;
+    opacity: 0;
+    -webkit-transition: all 3s ease-in-out 0s;
 }
-
-.a2 h2{
-    margin: 0 auto;
-    background: url("../images/title2.png") no-repeat 10px 20px;
+#a2 h2,#a3 h2,#a4 h2{
     width: 390px;
     height: 106px;
+    font-size: 70px;
+    opacity: 1;
+    -webkit-transition:1s;
 }
-
 .a2 .message{
     position: absolute;
     width: 100%;
@@ -154,30 +174,73 @@ html,body{
     -webkit-transition:1s
 }
 
-
-.a3 h2{
-    margin: 0 auto;
-    background: url("../images/title3.png") no-repeat 10px 20px;
-    width: 390px;
-    height: 106px;
-}
-.a4 h2{
-    margin: 0 auto;
-    background: url("../images/title4.png") no-repeat 10px 20px;
-    width: 390px;
-    height: 106px;
-}
-.a4 .technology{
+.a3 p{
     position: absolute;
-    bottom: 15%;
-    width: 100%;
+    font-size: 28px;
+    width: 290px;
     color: #fff;
-    font-size: 40px;
+    bottom: 20%;
 }
-.a4 .technology p{
-    display: inline-block;
+.a3 p:nth-child(1){
+    left: 52%;
+    bottom: 20%;
 }
-#a4 .technology p:nth-child(1){
+.a3 p:nth-child(2){
+    left: 52%;
+    bottom: 29%;
+}
+.a3 p:nth-child(3){
+    left: 52%;
+    bottom: 10%;
+}
+
+.a3 p:nth-child(odd){
+    -webkit-transform: translate(800px,0);
+}
+
+.a3  p:nth-child(even){
+    -webkit-transform: translate(-800px,0);
+}
+#a3 p{
+    -webkit-transform: translate(0,0);
+    -webkit-transition:1s
+}
+
+.a4 .technology{
+    color: #fff;
+    font-size: 50px;
+}
+.a4 .technology span{
+    position:absolute;
+    bottom: 20%;
+    opacity: 0.5;
+}
+.a4 .technology span:nth-child(1){
+    left:40%;
+    bottom: 33%;
+    color: #95cafe;
+}
+.a4 .technology span:nth-child(2){
     left: 20%;
-    top: 20%;
+    bottom: 26%;
+    color: #90c34c;
+}
+.a4 .technology span:nth-child(3){
+    left:35%;
+    bottom: 20%;
+    color: #fcd791;
+}
+.a4 .technology span:nth-child(4){
+    left:50%;
+    bottom: 13%;
+    color: #fff467;
+}
+.a4 .technology span:nth-child(5){
+    left:16%;
+    bottom: 10%;
+}
+#a4 .technology span{
+    -webkit-transform: rotate(720deg);
+    -webkit-transition: 1s;
+    opacity: 1;
 }

@@ -25,6 +25,7 @@ function start(e) {
 
 function move(e) {
     e.preventDefault();
+    this.flag = true;
     var touchMove= e.changedTouches[0].pageY;
     var changePos=touchMove-this.startY;//手势移动的距离
     var cur=this.index;
@@ -52,13 +53,14 @@ function move(e) {
 }
 
 function end(e) {
-    oLis[this.preSIndex].style.webkitTransform ="translate(0,0)";
-    oLis[this.preSIndex].style.webkitTransition="0.5s";
-    oLis[this.preSIndex].addEventListener('webkitTransitionEnd',function(){
-        this.style.webkitTransition="";
-        this.firstElementChild.id = "a"+(this.index+1);
-    })
+    if(this.flag){
+        oLis[this.preSIndex].style.webkitTransform ="translate(0,0)";
+        oLis[this.preSIndex].style.webkitTransition="0.5s";
+        oLis[this.preSIndex].addEventListener('webkitTransitionEnd',function(){
+            this.style.webkitTransition="";
+            this.firstElementChild.id = "a"+(this.index+1);
+        },false);
+    }
 }
-
 document.addEventListener('touchstart',function(){
 },false);

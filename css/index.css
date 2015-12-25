@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding:0;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
 }
 ul li{
     list-style: none;
@@ -9,7 +10,6 @@ html,body{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
 }
 #main{
     position: absolute;
@@ -20,6 +20,93 @@ html,body{
     margin-left: -320px;
     -webkit-transform-origin:top;
 }
+
+.pre{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -18px;
+    width: 36px;
+    height: 20px;
+    background: url("../images/icon.png") no-repeat;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes bounce {
+    from, 20%, 53%, 80%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0,-4px,0);
+        transform: translate3d(0,-4px,0);
+    }
+}
+
+@keyframes bounce {
+    from, 20%, 53%, 80%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0,-4px,0);
+        transform: translate3d(0,-4px,0);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+
+
+
+
 .slide li{
     position: absolute;
     top: 0;
@@ -27,6 +114,7 @@ html,body{
     width: 100%;
     height: 100%;
 }
+
 .slide li:nth-child(1){
     background:url("../images/a1.jpg") no-repeat;
 }
@@ -57,14 +145,14 @@ html,body{
     height: 96px;
     letter-spacing: 5px;
     font-size: 70px;
-    opacity: 1;
     -webkit-transition: all 3s ease-in-out 0s;
+    transition: all 3s ease-in-out 0s;
 }
 #a1 h2{
     width: 390px;
     height: 106px;
-    opacity: 1;
     -webkit-transition:1s;
+    transition:1s;
 }
 .a1 h2 img,.a2 h2 img,.a3 h2 img,.a4 h2 img{
     width: 100%;
@@ -157,7 +245,7 @@ html,body{
     text-align: left;
 }
 .a2 .message p{
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .a2 .message p span{
     color:#333399;
@@ -165,14 +253,18 @@ html,body{
 
 .a2 .message p:nth-child(odd){
     -webkit-transform: translate(500px,0);
+    transform: translate(500px,0);
 }
 
 .a2 .message p:nth-child(even){
     -webkit-transform: translate(-500px,0);
+    transform: translate(-500px,0);
 }
 #a2 .message p{
     -webkit-transform: translate(0,0);
-    -webkit-transition:1s
+    transform: translate(0,0);
+    -webkit-transition:1s;
+    transition:1s;
 }
 
 .a3 p{
@@ -198,14 +290,18 @@ html,body{
 
 .a3 p:nth-child(odd){
     -webkit-transform: translate(800px,0);
+    transform: translate(800px,0);
 }
 
 .a3  p:nth-child(even){
     -webkit-transform: translate(-800px,0);
+    transform: translate(-800px,0)
 }
 #a3 p{
     -webkit-transform: translate(0,0);
-    -webkit-transition:1s
+    transform: translate(0,0);
+    -webkit-transition:1s;
+    transition:1s;
 }
 
 .a4 .technology{
@@ -243,6 +339,8 @@ html,body{
 }
 #a4 .technology span{
     -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
     -webkit-transition: 1s;
+    transition: 1s;
     opacity: 1;
 }

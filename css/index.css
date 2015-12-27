@@ -35,7 +35,7 @@ html,body{
     background:url("../images/a2.jpg") no-repeat;
 }
 .slide li:nth-child(3){
-    background:#c0c0c0;
+    background:url("../images/a3.jpg") no-repeat;
 }
 .slide li:nth-child(4){
     background:url("../images/a4.jpg") no-repeat;
@@ -78,8 +78,8 @@ html,body{
     height: 300px;
     margin: 0 auto;
     border-radius: 50%;
-    background:#f00;
-    -webkit-transform: rotateZ(30deg);
+    background:url("../images/photo.jpg") no-repeat;
+    -webkit-transform: rotateZ(0deg);
 }
 #a1 .photo span{
     -webkit-transform: none;
@@ -168,6 +168,7 @@ html,body{
     padding: 10px;
     line-height: 66px;
     background: #fff;
+    opacity: 0.5;
     -webkit-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
     font-size: 30px;
@@ -208,4 +209,55 @@ html,body{
 #a3 p:nth-of-type(4){
     -webkit-transform: rotateZ(360deg);
     -webkit-transform-origin: 50% 0%;"
+}
+
+.a4 h2{
+    margin: 50px auto;
+    text-align: center;
+    width: 370px;
+    height: 96px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 60px;
+    -webkit-transition: all 3s ease-in-out 0s;
+}
+.a4 .technology{
+    color: #fff;
+    font-size: 50px;
+}
+.a4 .technology span{
+    position:absolute;
+    bottom: 20%;
+    opacity: 0.5;
+}
+.a4 .technology span:nth-child(1){
+    left:40%;
+    bottom: 33%;
+    color: #95cafe;
+}
+.a4 .technology span:nth-child(2){
+    left: 20%;
+    bottom: 26%;
+    color: #90c34c;
+}
+.a4 .technology span:nth-child(3){
+    left:35%;
+    bottom: 20%;
+    color: #fcd791;
+}
+.a4 .technology span:nth-child(4){
+    left:50%;
+    bottom: 13%;
+    color: #fff467;
+}
+.a4 .technology span:nth-child(5){
+    left:16%;
+    bottom: 10%;
+}
+#a4 .technology span{
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 1;
 }

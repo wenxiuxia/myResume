@@ -1,7 +1,7 @@
 var main = document.querySelector('#main');
 var oLis = document.querySelectorAll(".slide>li");
-var winW = window.innerWidth;//设备的宽度
-var winH = window.innerHeight;//设备的高度
+var winW = window.innerWidth;//设备的宽�?
+var winH = window.innerHeight;//设备的高�?
 var desW = 640;
 var desH = 1080;
 
@@ -11,6 +11,7 @@ if (winW / winH < desW / desH) {
 } else {
     main.style.webkitTransform = "scale(" + winW / desW + ")";
 }
+
 
 [].forEach.call(oLis, function () {
     arguments[0].index = arguments[1];//当前项的索引
@@ -27,7 +28,7 @@ function move(e) {
     e.preventDefault();
     this.flag = true;
     var touchMove= e.changedTouches[0].pageY;
-    var changePos=touchMove-this.startY;//手势移动的距离
+    var changePos=touchMove-this.startY;//手势移动的距�?
     var cur=this.index;
     var step=1/2;
     var scalePos=Math.abs(changePos)/winH*step;

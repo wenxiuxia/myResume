@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding:0;
-    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
 }
 ul li{
     list-style: none;
@@ -10,6 +9,7 @@ html,body{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
 }
 #main{
     position: absolute;
@@ -21,93 +21,6 @@ html,body{
     -webkit-transform-origin:top;
 }
 
-.pre{
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    margin-left: -18px;
-    width: 36px;
-    height: 20px;
-    background: url("../images/icon.png") no-repeat;
-    z-index: 115;
-}
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-@-webkit-keyframes bounce {
-    from, 20%, 53%, 80%, to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-    }
-
-    40%, 43% {
-        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0,-4px,0);
-        transform: translate3d(0,-4px,0);
-    }
-}
-
-@keyframes bounce {
-    from, 20%, 53%, 80%, to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-    }
-
-    40%, 43% {
-        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0,-4px,0);
-        transform: translate3d(0,-4px,0);
-    }
-}
-
-.bounce {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-}
-
-
-
-
 .slide li{
     position: absolute;
     top: 0;
@@ -115,7 +28,6 @@ html,body{
     width: 100%;
     height: 100%;
 }
-
 .slide li:nth-child(1){
     background:url("../images/a1.jpg") no-repeat;
 }
@@ -123,7 +35,7 @@ html,body{
     background:url("../images/a2.jpg") no-repeat;
 }
 .slide li:nth-child(3){
-    background:url("../images/a3.jpg") no-repeat;
+    background:#c0c0c0;
 }
 .slide li:nth-child(4){
     background:url("../images/a4.jpg") no-repeat;
@@ -133,215 +45,167 @@ html,body{
     z-index: 111;
 }
 
-.a1{
-    position: absolute;
-    color:#fff;
-    width: 100%;
-    height: 100%;
-}
-.a1 h2{
-    margin: 50px auto;
-    text-align: center;
-    width: 370px;
-    height: 96px;
-    letter-spacing: 5px;
-    font-size: 70px;
-    -webkit-transition: all 3s ease-in-out 0s;
-    transition: all 3s ease-in-out 0s;
-}
-#a1 h2{
-    width: 390px;
-    height: 106px;
-    -webkit-transition:1s;
-    transition:1s;
-}
-.a1 h2 img,.a2 h2 img,.a3 h2 img,.a4 h2 img{
-    width: 100%;
-    height: 100%;
-}
 
-.a1 span{
-    width: 100%;
+.up{
     position: absolute;
-    top: 60%;
-    letter-spacing: 5px;
-    text-align: center;
-    font-size: 50px;
-}
-
-.a1 .point{
-    position: absolute;
-    bottom: -80%;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-.a1 .point p{
-    position: absolute;
-    width: 84px;
-    height: 84px;
-    -webkit-transition: all 0.8s ease-in-out 0s;
-    transition: all 0.8s ease-in-out 0s;
-}
-.a1 .point p:nth-child(1){
-    background:url("../images/btn1.png") no-repeat;
-    left: 5%;
-    top: -2%;
-}
-.a1 .point p:nth-child(2){
-    background:url("../images/btn2.png") no-repeat;
-    left: 20%;
-    top: -5%;
-}
-.a1 .point p:nth-child(3){
-    background:url("../images/btn1.png") no-repeat;
-    left: 35%;
-    top: -4%;
-}
-.a1 .point p:nth-child(4){
-    background:url("../images/btn1.png") no-repeat;
+    bottom: 60px;
     left: 50%;
-    top: -5%;
-}
-.a1 p:nth-child(5){
-    background:url("../images/btn1.png") no-repeat;
-    left: 65%;
-    top: -3%;
-}
-.a1 p:nth-child(6){
-    background:url("../images/btn1.png") no-repeat;
-    right: 5%;
-    top: -5%;
-}
-#a1 .point p{
-    -webkit-transform: rotate(-360deg) scale(0.7);
-    transform: rotate(-360deg) scale(0.7);
+    margin-left: -18px;
+    width: 36px;
+    height: 20px;
+    background: url("../images/icon.png") no-repeat;
+    z-index: 115;
 }
 
-.a2 h2,.a3 h2,.a4 h2{
-    margin: 50px auto;
-    text-align: center;
-    width: 370px;
-    height: 96px;
-    color: #fff;
-    letter-spacing: 5px;
-    font-size: 40px;
-    opacity: 0;
-    -webkit-transition: all 3s ease-in-out 0s;
-}
-#a2 h2,#a3 h2,#a4 h2{
-    width: 390px;
-    height: 106px;
-    font-size: 70px;
-    opacity: 1;
-    -webkit-transition:1s;
-}
-.a2 .message{
-    position: absolute;
+.a1{
+    position: relative;
     width: 100%;
+    height: 100%;
+}
+.a1 .photo{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 30px auto ;
+    background: #fff;
+
+}
+
+.a1 .photo span{
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:#f00;
+    -webkit-transform: rotateZ(30deg);
+}
+#a1 .photo span{
+    -webkit-transform: none;
+    -webkit-animation: zoomIn 0.4s ease 0.2s both;
+}
+
+.a1 p{
+    position: absolute;
+    display: inline-block;
+    height: 300px;
+}
+.a1 p:nth-of-type(1),.a1 p:nth-of-type(3){
+    width: 50px;
+    font-size: 60px;
     color: #fff;
-    margin-left: 25%;
+}
+.a1 p:nth-of-type(1){
+    left: 28%;
+    top:36%;
+}
+.a1 p:nth-of-type(2){
+    left: 46%;
+    width: 2px;
+    background: #fff;
+}
+.a1 p:nth-of-type(3){
+    height: 300px;
+    right:35%;
+}
+
+.a2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.a2 p{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 500px;
+
+    margin-left: -250px;
+    line-height: 66px;
     font-size: 40px;
-    bottom:15%;
-    text-align: left;
+    color: #fff;
 }
-.a2 .message p{
-    margin-top: 8px;
+.a2 p:nth-of-type(1){
+    width: 77px;
+    height: 138px;
+    font-weight: bold;
+    font-size: 60px;
+    color:darkslateblue;
+    opacity: 0;
+    -webkit-transform: translate(0,-500px);
 }
-.a2 .message p span{
-    color:#333399;
+.a2 p:nth-of-type(2){
+    left: 64%;
+    width: 2px;
+    height: 500px;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translate(0,-800px);
 }
-
-.a2 .message p:nth-child(odd){
+.a2 p:nth-of-type(3){
+    left: 70%;
+    opacity: 0;
     -webkit-transform: translate(500px,0);
-    transform: translate(500px,0);
 }
-
-.a2 .message p:nth-child(even){
-    -webkit-transform: translate(-500px,0);
-    transform: translate(-500px,0);
-}
-#a2 .message p{
+#a2 p{
+    opacity: 1;
     -webkit-transform: translate(0,0);
-    transform: translate(0,0);
-    -webkit-transition:1s;
-    transition:1s;
+    -webkit-transition:2s
 }
 
+.a3{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 .a3 p{
     position: absolute;
-    font-size: 28px;
-    width: 290px;
-    color: #fff;
-    bottom: 20%;
-    left:5%;
-}
-.a3 p:nth-child(1){
-    left: 52%;
-    bottom: 20%;
-}
-.a3 p:nth-child(2){
-    left: 52%;
-    bottom: 29%;
-}
-.a3 p:nth-child(3){
-    left: 52%;
-    bottom: 10%;
+    left: 5%;
+    top: 5%;
+    width: 420px;
+    height: 150px;
+    padding: 10px;
+    line-height: 66px;
+    background: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    font-size: 30px;
 }
 
-.a3 p:nth-child(odd){
-    -webkit-transform: translate(800px,0);
-    transform: translate(800px,0);
+.a3 p:nth-of-type(2) {
+    top: 26.5%;
+    left: 25%;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
-.a3  p:nth-child(even){
-    -webkit-transform: translate(-800px,0);
-    transform: translate(-800px,0)
-}
-#a3 p{
-    -webkit-transform: translate(0,0);
-    transform: translate(0,0);
-    -webkit-transition:1s;
-    transition:1s;
+.a3 p:nth-of-type(3) {
+    top: 51%;
+    left:25%;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
-.a4 .technology{
-    color: #fff;
-    font-size: 50px;
+.a3 p:nth-of-type(4) {
+    top: 75.5%;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
-.a4 .technology span{
-    position:absolute;
-    bottom: 20%;
-    opacity: 0.5;
+#a3 p:nth-of-type(1){
+    left: 5%;
+    -webkit-transform: rotateZ(360deg);
 }
-.a4 .technology span:nth-child(1){
-    left:40%;
-    bottom: 33%;
-    color: #95cafe;
+
+#a3 p:nth-of-type(2){
+    left: 25%;
+    -webkit-transform: rotateZ(360deg);
 }
-.a4 .technology span:nth-child(2){
-    left: 20%;
-    bottom: 26%;
-    color: #90c34c;
+#a3 p:nth-of-type(3){
+    left: 25%;
+    -webkit-transform: rotateZ(360deg);
 }
-.a4 .technology span:nth-child(3){
-    left:35%;
-    bottom: 20%;
-    color: #fcd791;
-}
-.a4 .technology span:nth-child(4){
-    left:50%;
-    bottom: 13%;
-    color: #fff467;
-}
-.a4 .technology span:nth-child(5){
-    left:16%;
-    bottom: 10%;
-}
-#a4 .technology span{
-    -webkit-transform: rotate(720deg);
-    transform: rotate(720deg);
-    -webkit-transition: 1s;
-    transition: 1s;
-    opacity: 1;
+#a3 p:nth-of-type(4){
+    -webkit-transform: rotateZ(360deg);
+    -webkit-transform-origin: 50% 0%;"
 }
